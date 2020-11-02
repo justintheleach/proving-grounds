@@ -2,9 +2,9 @@
 #Created from scratch by Justin Leach 11/1/2020
 #I know it's not the most advanced thing ever but it proves I know Python
 
-import random
+import random #use for the robot's choices
 
-#Function called when there is a new print needed
+#Function that prints the game board
 def printer(table):
     print("+-----------------+")
     for i in range(len(table)): #loop through rows
@@ -14,6 +14,7 @@ def printer(table):
         print("")#new line
         print("+-----------------+")
 
+#Function to check if a player has won
 def check(table, row, col, symbol):
     #check for diagonal victories
     if table[0][0] == symbol and table[1][1] == symbol and table[2][2] == symbol: #downward diagonal victory
@@ -38,6 +39,7 @@ def check(table, row, col, symbol):
         result = False
     return result
 
+#Function that checks if the game is a tie
 def tie(table):
     tie = True
     for i in range(len(table)): #loop through rows
@@ -46,6 +48,7 @@ def tie(table):
                 tie = False #if empty space, not a tie
     return tie
 
+#Main function
 def main():
     #initialize variables
     result = True #boolean for the check function - determines if a player has won
@@ -109,5 +112,6 @@ def main():
                 print("It's a tie!")
                 done = True
         except:
-            print('Enter numbers between 1 and 3 in this format: "x y"')    
-main()
+            print('Enter numbers between 1 and 3 in this format: "x y"')
+            
+main() #calls the main function to start the game
