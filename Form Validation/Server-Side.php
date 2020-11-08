@@ -1,22 +1,22 @@
-// Server-Side PHP Form Validation by Justin Leach 11/8/20
-//  
-//  This is an example of using PHP to validate input of a signup form.
-//  The form is asking for:
-//    -First name
-//    -Last name
-//    -Email address
-//    -Password
-//    -Repeat password
-//  By default, the submit button is disabled until all fields are valid (handled with JavaScript, which is included as "Client-Side.js" within this folder).
-// 
-//  There is also text that will show up if there is invalid input, which tells the user what the problem is.
-//  The advantage of using PHP for form validation is security and streamlined access to the database.  You can also pass along errors in the URL.
-//  
-//  But you must also perform client-side validation.  I did mine with JavaScript, which is located within this same "Form Validation" folder.
-//
-//  This example does not include creating the new user account in your database.  It only validates the form data.
-//  
-//  My HTML:
+  Server-Side PHP Form Validation by Justin Leach 11/8/20
+  
+  This is an example of using PHP to validate input of a signup form.
+  The form is asking for:
+    -First name
+    -Last name
+    -Email address
+    -Password
+    -Repeat password
+  By default, the submit button is disabled until all fields are valid (handled with JavaScript, which is included as "Client-Side.js" within this folder).
+ 
+  There is also text that will show up if there is invalid input, which tells the user what the problem is.
+  The advantage of using PHP for form validation is security and streamlined access to the database.  You can also pass along errors in the URL.
+  
+  But you must also perform client-side validation.  I did mine with JavaScript, which is located within this same "Form Validation" folder.
+
+  This example does not include creating the new user account in your database.  It only validates the form data.
+  
+  My HTML:
             <form class="signup" action="../php/signup.php" method="post"> //when the user clicks the submit button it runs a PHP script, which I explain below my HTML
                 <h2>Create an Account</h2>
                 <p>An account will give you access to purchase our book</p>
@@ -86,10 +86,10 @@
                 <button type="submit" class="disabled" name="submit">Create Account</button>
             </form>
 
-//  My CSS has styling for the classes - but I won't paste it here.  I have gone ahead and styled all "hidden" classes to have a display:none.  
-//  The disabled button is also grey while the active button is colored to match the theme of my website.
-//
-//  My PHP, which is accessed through the "post" method of the HTML form: 
+  My CSS has styling for the classes - but I won't paste it here.  I have gone ahead and styled all "hidden" classes to have a display:none.  
+  The disabled button is also grey while the active button is colored to match the theme of my website.
+
+  My PHP, which is accessed through the "post" method of the HTML form: 
 
 <?php
 
